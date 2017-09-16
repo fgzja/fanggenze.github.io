@@ -1,104 +1,48 @@
-/*CSS Reset*/
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-textarea,
-p,
-blockquote,
-th,
-td,
-header,
-hgroup,
-nav,
-section,
-article,
-aside,
-footer,
-figure,
-figcaption,
-menu,
-button {
-  margin: 0;
-  padding: 0;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
 body {
-    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif; 
-    line-height: 24px;
-    font-size: 14px;
-    color: #000;
-    background-color: #efeff4;
-    -webkit-user-select: none;
-    -webkit-text-size-adjust: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    
+	line-height: 1;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    font-size:inherit;
-    font-weight: normal;
+ol, ul {
+	list-style: none;
 }
-
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-
-fieldset,
-img {
-    border: 0;
-}
-
-li {
-    list-style: none;
-}
-
-input,
-textarea,
-select {
-    font-family:inherit;
-    font-size:inherit;
-    font-weight:inherit;
-}
-
-button,
-input[type="text"]{
-    border: none;
-    background: none;
-    -webkit-appearance:none;
-	outline:none;
-}
-
-a {
-    -webkit-touch-callout:none;
-    text-decoration: none;
-    color: #0079ff;
-    outline:none;
-}
-
-em,i {
-    font-style: normal;
-}
-
-::-webkit-input-placeholder {
-    color:#999;
-}
-
-input::input-placeholder { text-align: center }
