@@ -1,0 +1,517 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>New Start·Game On</title>
+    <meta name="author" content="NorthWind" />
+    <link rel="stylesheet " href="h5/css/layer.css">
+    <link rel="stylesheet" href="h5/css/swiper.min.css">
+    <script src="h5/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="h5/css/animate.min.css">
+    <script type="text/javascript" src="h5/js/animate1.0.2.min.js"></script>
+    <link rel="stylesheet" href="h5/css/global.css">
+    <link rel="stylesheet" href="h5/css/open.css">
+    <!-- 自适应缩放css -->
+    <style type="text/css">
+        body{ font-size: 12px; overflow-x: hidden; background-color: #000; max-width: 640px; margin: 0 auto; }
+        .swiper-container{   -webkit-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left; margin: 0; background-color: #eaebe6;  }
+        .swiper-wrapper *{ -webkit-backface-visibility: hidden; } /* 避免ip4Safari闪动 */
+        .page-provider{ position:absolute; top:0; text-align: center; width: 100%; font-size: 1.2em;line-height: 3em; color: #e5d2d4; }
+        .page-provider#page-provider-bottom{ top:auto; bottom: 0; }
+        .swiper-slide{  position: relative; overflow: hidden;  }
+        .slide-top{ position: absolute; top: 0; width: inherit; background-color: RGBA(255,100,100,0.5); }
+        .slide-center{ width: inherit; height: 820px; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; background-color: RGBA(0,100,255,0.5); }
+        .slide-bottom{ position: absolute; bottom: 0; width: inherit; background-color: RGBA(100,255,100,0.5); }
+    </style>
+    <style type="text/css">
+        .swiper-container{
+            background-image:url("img/png/bg1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-transition: background-image 1.2s ease-in-out;
+            -moz-transition: background-image 1.2s ease-in-out;
+            -ms-transition: background-image 1.2s ease-in-out;
+            -o-transition: background-image 1.2s ease-in-out;
+            transition: background-image 1.2s ease-in-out;
+        }
+
+        .swiper-wrapper{  }
+
+
+
+
+        .swiper-slide{
+           /* background: none!important;*/
+        }
+
+        .abs{ position: absolute; left: 0; top: 0; }
+        .w100{ width: 100%; }
+
+
+        #s1{ background: url("img/png/bg1.jpg") no-repeat; background-size: cover; }
+        #s2{ background: url("img/png/bg2.png") no-repeat; background-size: cover; }
+        #s3{ background: url("img/png/bg4.jpg") no-repeat; background-size: cover;}
+        #s4{ background: url("img/png/bg5.jpg") no-repeat; background-size: cover; }
+        #s5{ background: url("img/png/bg6.jpg") no-repeat; background-size: cover;}
+        #s6{ background: url("img/png/bg7.jpg") no-repeat; background-size: cover;}
+        #s7{ background: url("img/png/bg8.jpg") no-repeat; background-size: cover;}
+
+
+
+
+
+        #s1 .ani{ -webkit-animation-timing-function: cubic-bezier(0.07, 0.32, 0.06, 0.99); }
+        #s3 .ani{ -webkit-animation-timing-function: cubic-bezier(0.07, 0.32, 0.06, 0.99); }
+        #s4 .ani{ -webkit-animation-timing-function: cubic-bezier(0.07, 0.32, 0.06, 0.99); }
+
+        .formWrap {
+            width: 60%;
+            margin: 40% auto 0;
+            font-size: 13px;
+        }
+        .formWrap input,.formWrap textarea{ font-size: 13px;  display: block; width: 100%; border-radius: 3px; border: 1px solid #AAA; padding: 0; margin:10px 0; line-height: 1.8em; }
+        .formWrap .submitBtn{  background-color: #ff4200; padding:4px 0; border-radius: 4px; color: #FFF; font-weight: bold; font-size: 13px; cursor: pointer; -webkit-appearance: none; }
+
+        /* 树叶飘动特效 */
+        .leaf{
+            animation: tr-lb linear 8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            transform-origin: 50% 50%;
+            -webkit-animation: tr-lb linear 8s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            -webkit-transform-origin: 50% 50%;
+        }
+        .leaf1{ top: -30px; left: 200px; -webkit-animation-delay: 0s;    -webkit-animation-duration: 8s;z-index: 88 }
+        .leaf2{ top: -30px; left: 360px; -webkit-animation-delay: 3s;    -webkit-animation-duration: 5.3s;z-index: 88 }
+        .leaf3{ top: 150px; left: 360px; -webkit-animation-delay: 2.4s;  -webkit-animation-duration: 9.7s; z-index: 88}
+
+        @keyframes tr-lb{
+            0% {    transform:  translate(0px,0px) rotate(0);   }
+            100% {    transform:  translate(-370px,270px) rotate(500deg) ;  }
+        }
+
+        @-webkit-keyframes tr-lb {
+            0% {    -webkit-transform:  translate(0px,0px) rotate(0)  ;  }
+            100% {    -webkit-transform:  translate(-370px,270px) rotate(500deg)  ;  }
+        }
+
+        .topLeafBox { z-index:88; top: 0;  right: 0;  left: auto;  background: url("img/yezi/topLeaf.png") no-repeat;  background-size: 100%;  width: 309px;  height: 88px;  position: absolute;}
+        .topLeaf{
+            position: absolute;
+            top: -20px;
+            display: block;
+
+            animation: topLeafYoyo ease-in-out 4s;
+            animation-direction:alternate;
+            animation-iteration-count: infinite;
+            transform-origin: 50% 50%;
+            -webkit-animation: topLeafYoyo ease-in-out 4s;
+            -webkit-animation-direction:alternate;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-transform-origin: 50% 50%;
+        }
+        .topLeaf1{   left: 98px;  -webkit-transform-origin: top center; }
+        .topLeaf2{ left: 268px; top: -15px; -webkit-transform-origin: top right;  -webkit-animation-delay: 1.2s;    -webkit-animation-duration: 5.7s; }
+
+        @keyframes topLeafYoyo{
+            0% {    transform:   rotate(-5deg);   }
+            100% {    transform:   rotate(5deg) ;  }
+        }
+
+        @-webkit-keyframes topLeafYoyo{
+            0% {    -webkit-transform:   rotate(-5deg);   }
+            100% {    -webkit-transform:   rotate(5deg) ;  }
+        }
+
+
+
+        body{
+            font-size: 22px;
+        }
+
+
+        input::input-placeholder{text-align: center}
+
+    </style>
+
+</head>
+<body ><!-- body code begin -->
+
+<!-- SUDA_CODE_START -->
+
+<!--
+* 说明：
+* 多页面滑动模板，适用于 类ppt 页面
+* 使用 idangerous.swiper 插件切换页面 ，参数请在下方 【Initialize swiper】中自行更改
+* 页 swiper-slide
+*   页眉 slide-top
+*   正文 slide-center
+*   页脚 slide-bottom
+ -->
+<div class="swiper-container">
+    <!-- 树叶飘动特效 -->
+    <img class="abs leaf leaf1" src="img/yezi/leaf_1.png" width="59">
+    <img class="abs leaf leaf2" src="img/yezi/leaf_2.png" width="33">
+    <img class="abs leaf leaf3" src="img/yezi/leaf_3.png" width="49">
+
+    <!-- 树叶摆动特效 -->
+    <div class="abs topLeafBox">
+        <img class="abs topLeaf topLeaf1" src="img/yezi/topLeaf_1.png" width="53">
+        <img class="abs topLeaf topLeaf2" src="img/yezi/topLeaf_2.png" width="52">
+    </div>
+
+    <div class="swiper-wrapper">
+        <!--第一页--->
+        <div class="swiper-slide" id="s1">
+            <img class="abs w100 ani" alt="" src="img/png/fresh.png" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0.8s">
+        </div>
+
+        <!-- 第2页-->
+        <div class="swiper-slide swiper-no-swiping" id="s2">
+            <img class="abs w100 ani" alt="" src="img/png/car.png"    swiper-animate-effect="fadeInDown" swiper-animate-duration="1.6s" swiper-animate-delay="0.2s" animate-iteration-count="3">
+            <img class="abs w100 ani" id="ccc" alt="" src="img/png/car-4.png"  swiper-animate-effect="zoomIn"  swiper-animate-duration="1.8s" swiper-animate-delay="0.2s"
+            >
+
+
+
+            <div class="mod-chest" style="    position: relative;
+                z-index: 2;
+                    height: 450px;
+                width: 320px;
+                    margin:50% auto">
+                <div class="chest-close">
+                    <div class="gift"></div>
+                    <div class="tips">
+                        <i class="arrow"></i>
+                    </div>
+                </div>
+                <div class="chest-open ">
+
+                    <div class="mod-chest-cont open-cont">
+                        <!--<img src="img/png/key.png">-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="click-close" id="show">
+                <img class="abs  w100 ani" alt=""  id="boxShake"  src="img/png/long-box2.png" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="1.2s"   style="margin-top:100%;z-index: 99;animate-iteration-count:5">
+
+             </div>
+            </div>
+
+
+
+        <!-- 第3页-->
+        <div class="swiper-slide swiper-no-swiping" id="s3">
+
+
+
+            <div style="position: absolute;z-index: 99;text-align: center;margin-top:121%;padding:17px 72px;
+    margin-left: 27%;" class="next"></div>
+        </div>
+
+        <!--第4页--->
+        <div class="swiper-slide swiper-no-swiping" id="s4">
+            <img class="abs w100 ani" alt="" src="img/png/bg5.jpg" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s">
+
+
+            <img class="abs w100 ani" alt="" src="img/png/four-1.png" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0s">
+            <img class="abs w100 ani" alt="" src="img/png/four-2.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2.2s" swiper-animate-delay="0s">
+            <img class="abs w100 ani" alt="" src="img/png/four-3.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2.2s" swiper-animate-delay="0.13s">
+
+
+            <div style="position: absolute;z-index: 99;text-align: center;margin-top:129%;padding:23px 38px;
+    margin-left:40%;" class="next"></div>
+        </div>
+
+
+
+        <!--第5页--->
+        <div class="swiper-slide swiper-no-swiping" id="s5">
+            <img class="abs w100 ani" alt="" src="img/png/bg6.jpg" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s">
+
+
+
+            <img class="abs w100 ani" alt="" src="img/png/six-1.png" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.1s">
+            <img class="abs w100 ani" alt="" src="img/png/six-2.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="2.2s" swiper-animate-delay="0.2s">
+            <img class="abs w100 ani" alt="" src="img/png/six-3.png" swiper-animate-effect="bounceInLeft" swiper-animate-duration="3.2s" swiper-animate-delay="0.2s">
+            <img class="abs w100 ani" alt="" src="img/png/six-4.png" swiper-animate-effect="slideInRight" swiper-animate-duration="4.2s" swiper-animate-delay="0.2s">
+
+
+            <div style="position: absolute;z-index: 99;text-align: center;margin-top:135%;padding: 26px 60px;
+    margin-left:31%;" class="next"></div>
+        </div>
+
+
+        <!--第6页--->
+        <div class="swiper-slide swiper-no-swiping" id="s6">
+            <img class="abs w100 ani" alt="" src="img/png/bg7.jpg" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s">
+
+
+            <img class="abs w100 ani" alt="" src="img/png/seven-1.png" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0s">
+            <div class="abs w100 ani" style="text-align: center;margin-top:60%;z-index: 999">
+                <input type="text" placeholder="请输入您的姓名" id="name">
+            </div>
+            <div class="abs w100 ani" style="text-align: center;margin-top:75%;z-index: 999">
+                <input type="text" placeholder="请输入您的手机号" id="phone">
+            </div>
+            <img class="abs w100 ani" alt="" src="img/png/seven-4.png" swiper-animate-effect="slideInUp" swiper-animate-duration="2
+            3.3s" swiper-animate-delay="0s" style="top: -30px;">
+
+
+
+            <div style="position: absolute;z-index: 99;text-align: center;margin-top:114%;padding:30px 80px;
+    margin-left: 25%;" class="submit"></div>
+        </div>
+        <!--第7页--->
+        <div class="swiper-slide" id="s7">
+
+            <img class="abs w100 ani" alt="" src="img/png/bg8.jpg" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0s">
+
+
+
+            <img class="abs w100 ani" alt="" src="img/png/eight.png" swiper-animate-effect="flip" swiper-animate-duration="1s" swiper-animate-delay="0s">
+
+            <div class="abs w100 ani" style="text-align: center;margin-top:100%;z-index: 999;font-size:1.5rem;font-family:'Microsoft YaHei';color: #475359" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="1s" swiper-animate-delay="1.5s" id="lastName">
+
+            </div>
+
+
+
+            <img class="abs w100 ani" alt="" src="img/png/eight-1.png" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="2s">
+            <div class="abs w100 ani" style="text-align: center;margin-top:80%;z-index: 999" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="2.5s">
+                <input type="text" value="" readOnly="true" id="code" placeholder="上一页信息要填写" >
+            </div>
+
+            <img class="abs w100 ani" alt="" src="img/png/eight-4.png" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="3s">
+
+
+
+        </div>
+
+
+    </div>
+
+    <!-- BGM DOM -->
+    <audio id="bgm" src="music/KateYork-NewYear.mp3" autoplay="autoplay" loop style="display: none; width: 0; height: 0;"></audio>
+
+    <!-- BGM play/mut Btn -->
+    <style>
+        .bgm-btn{ position:absolute; top: 16px; right:16px; width: 30px; height: 30px; background-size: 100%; background-image: url("img/bgm.png"); z-index:999; -webkit-animation: myrotate 5s linear 0s infinite normal;}
+        .bgm-btn.mut{ background-position: 0px -30px; -webkit-animation: none;}
+
+        @-webkit-keyframes myrotate /*Safari and Chrome*/
+        {
+            0% { -webkit-transform:rotate(0deg);}
+            25% { -webkit-transform:rotate(-90deg);}
+            50% { -webkit-transform:rotate(-180deg);}
+            75% { -webkit-transform:rotate(-270deg);}
+            100% { -webkit-transform:rotate(-360deg);}
+        }
+
+    </style>
+    <div class="bgm-btn"></div>
+
+    <!-- Touch to play BGM. JS -->
+
+</div>
+</body>
+
+
+<script type="text/javascript" src="js/layer.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript">
+
+
+</script>
+<script src="js/layer.js"></script>
+<script type="text/javascript">
+
+    window.onload=function(){
+        var firstTouch = true;
+        $('body').bind("touchend",function(e){
+            if ( firstTouch ) {
+                firstTouch = false;
+                document.getElementById('bgm').play();
+            }else{
+                return;
+            }
+        });
+
+        $(".bgm-btn").bind("touchend",function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            var dom = document.getElementById('bgm');
+            if( dom.paused ){
+                dom.play();
+                $(".bgm-btn").removeClass("mut");
+            }else{
+                dom.pause();
+                $(".bgm-btn").addClass("mut");
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if(document.readyState == "complete"){
+            $(".swiper-wrapper").show();
+        }
+
+        var myswiper = new Swiper('.swiper-container', {
+            centeredSlides: true,
+            autoplay:3000,
+            speed:1000,
+            direction : 'vertical',
+            noSwiping : true,
+            autoplayDisableOnInteraction: false,
+            onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+                swiper.myactive = 0;
+                swiperAnimateCache(swiper); //隐藏动画元素
+                swiperAnimate(swiper); //初始化完成开始动画
+            },
+            onSlideChangeEnd: function(swiper){
+                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                swiper.stopAutoplay();
+            }
+        });
+
+
+        $('#boxShake').click(function(){
+            // $(".swiper-container").css("background-image", 'url("img/png/bg3.png")');
+            $('.click-close').css('opacity','0')
+            $('.chest-open').addClass("show");
+
+            // $('.chest-close').addClass("show");
+
+
+        })
+
+
+        $('.open-cont').click(function(){
+            myswiper.slideNext();
+        })
+
+        $('.next').click(function(){
+            myswiper.slideNext();
+        })
+
+
+
+
+
+
+
+
+        var oPhone=document.getElementById('phone');
+        var oName=document.getElementById('name');
+        var olastName=document.getElementById('lastName');
+        var oCode=document.getElementById('code');
+
+        function JTrim2(s) {
+            return s.replace(/\s+/g, "");
+        }
+
+        /*弹出层*/
+//        $(document.body).on('click', '.submit', function() {
+//
+//            var isExisted = false;
+//            for(var i = 0; i < packJson.length; i++){
+//                if(JTrim2(oPhone.value) == "" && JTrim2(oName.value) == ""){
+//                    layer.open({
+//                        content: '名字和号码不能为空，要参加抽奖哦'
+//                        ,btn: '好的'
+//                    });
+//                    isExisted = true;
+//                    return i;
+//
+//                }else if(oPhone.value==packJson[i].phone){
+//                        olastName.innerHTML=oName.value;
+//                        oCode.value=packJson[i].code;
+//                        myswiper.slideNext();
+//                        isExisted = true;
+//                        return i;
+//                }
+//            }
+//
+//
+//            if(isExisted == false){
+//                layer.open({
+//                    content: '哎呦，您的信息填写有误，请重新填写'
+//                    ,btn: '我知道了'
+//                });
+//            }
+//
+//
+//
+//
+//        });
+        function  containValue(value,packJson){
+            for(var i = 0; i < packJson.length; i++){
+                if(value==packJson[i].phone){
+                    olastName.innerHTML=oName.value;
+                    oCode.value=packJson[i].code;
+                    myswiper.slideNext();
+                    return true;
+                }
+            }
+            return false;
+        }
+        $(document.body).on('click', '.submit', function() {
+            if(JTrim2(oPhone.value) == "" && JTrim2(oName.value) == ""){
+                layer.open({
+                    content: '名字和号码不能为空，要参加抽奖哦'
+                    ,btn: '好的'
+                });
+                return false;
+            }
+
+            if(!containValue(oPhone.value,packJson)){
+                layer.open({
+                    content: '哎呦，您的信息填写有误，请重新填写'
+                    ,btn: '我知道了'
+                });
+                return false;
+            }
+        });
+
+
+
+
+
+
+
+      /*  var oBox = document.getElementById("show"); //要闪烁的div id
+        var timer = null;   //定义时间器
+        var i = 0;
+        clearInterval(timer); //先清空时间器
+       /!* oBox.onclick = function(){ //当鼠标移入div时 清空时间器
+            clearInterval(timer);
+        };*!/
+        timer = setInterval(function () {
+            $('#boxShake').addClass("flash");
+            oBox.style.display = i++ % 2 ? "none" : "block";  // 有规律的控制div的展示与隐藏
+            i > 800 && (clearInterval(timer))  //控制闪烁次数
+        }, 500 );
+
+*/
+    }
+</script>
+</html>
